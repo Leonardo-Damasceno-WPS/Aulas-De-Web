@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+    @*bloco unitário*@
+    @{ var Nome = "Leonardo";}
+    @{ var Idade = 19; }
+    
+        @*Incorporado*@
+        <p>O nome do usuário é: @Nome</p>
+        <p>A idade do usuário é: @Idade</p>
+
+        @*Multi linhas*@
+        @{ 
+            var Modelo = "GTR";
+            var Tipo = "esportivo";
+            var Fabricante = "Nissan";
+            var Mensagem = "O modelo é um " + Modelo + ", este carro é do tipo " + Tipo + " e é " +
+                "fabricada pela " + Fabricante + ".";
+            }
+        <h1>Informações do carro do cliente "@Nome"</h1>
+        <p>@Mensagem</p>
+    @*Este é um exemplo de comentário em Razor*@
+        @{ var dia = DateTime.Now.Day; }
+        <p>Hoje é: @dia</p>
+    </div>
+</body>
+</html>
