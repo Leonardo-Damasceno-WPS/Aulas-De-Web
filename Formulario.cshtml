@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+    <form method="post">
+        <fieldset style="width: 25%; border:groove; border-color:magenta; background-color: lightblue">
+            <legend style="font-size:medium;color:navy;background-color:gold">Adicionar Disco
+            </legend>
+            <div>
+                <label for="NomeDisco">Nome do Disco:</label>
+                <input type="text" name="NomeDisco" value=""/>
+            </div>
+            <div>
+                <label for="Artista">Nome do Artista:</label>
+                <input type="text" name="NomeArtista" />
+            </div>
+            <div>
+                <label for="Faixas">Quantidade de faixas:</label>
+                <input type="text" name="Faixas" value="" />
+            </div>
+            <div>
+                <br/>
+                <label>&nbsp;</label>
+                <input type="submit" value="Adicionar" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+        <div>
+            @{ if (IsPost)
+                {
+                    string nomeDisco = Request.Form["NomeDisco"];
+                    string nomeArtista = Request.Form["NomeArtista"];
+                    int nFaixas = Request.Form["Faixas"].AsInt();
+                <fieldset style="width: 25%; border: groove; border-color:magenta; background-color:lightblue">
+                <legend style="font-size:medium;color:navy;background-color:gold">Disco Adicionado</legend>
+                    <p>Nome do Disco: @nomeDisco</p>
+                    <p>Nome do Artista: @nomeArtista</p>
+                    <p>Número de faixas: @nFaixas</p>
+                </fieldset>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>
