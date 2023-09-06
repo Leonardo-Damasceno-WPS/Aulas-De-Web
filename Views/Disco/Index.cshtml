@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Aula_3.Models.Disco>
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <tr>
+            <tr> @Html.DisplayNameFor(model => model.disco)</th>
+            <tr> @Html.DisplayNameFor(model => model.artista)</th>
+            <tr> @Html.DisplayNameFor(model => model.faixas)</th>
+            </tr>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.disco)</td>
+                <td> @Html.DisplayFor(modelItem => item.artista)</td>
+                <td> @Html.DisplayFor(modelItem => item.faixas)</td>
+                <td> @Html.ActionLink("Atualizar", "AtualizaDisco", new { id = item.disco }) |</td>
+                <td> @Html.ActionLink("Delete", "ApagaDisco", new { id = item.disco },
+                new { onclick = "return confirm('Você tem certeza que deseja excluir o Disco?');" }|</td>
+            </tr>
+        }</tbody>
+        </table>
+        <p>
+            @Html.ActionLink("Adicionar Disco", "AdicionarDisco")
+        </p>
+    </div>
+</body>
+</html>
+
+

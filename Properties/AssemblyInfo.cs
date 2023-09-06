@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As Informações Gerais sobre um assembly são controladas por meio do 
 // conjunto de atributos a seguir. Altere esses valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("AulaRazorMVC")]
+[assembly: AssemblyTitle("Aula_3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AulaRazorMVC")]
+[assembly: AssemblyProduct("Aula_3")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // A GUID a seguir será referente à ID do typelib se este projeto for exposto ao COM
-[assembly: Guid("cd2252a6-325d-4b78-bb2b-f81ff05dc3d6")]
+[assembly: Guid("85c7b02a-6860-4786-ab7f-c0f77354ea58")]
 
 // As informações de versão de um assembly consistem nos quatro valores a seguir:
 //

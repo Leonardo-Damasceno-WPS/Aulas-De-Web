@@ -1,0 +1,40 @@
+﻿@model Aula_3.Models.Disco
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Adiciona</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <fieldset style="width: 25%; border:groove;border-color:magenta;background-color:lightblue">
+                <legend style="font-size:medium;color:navy;background-color:gold">Adicionar Disco</legend>
+                <div>
+                    <label for="NomeDisco">Nome Do Disco:</label>
+                    @Html.EditorFor(model => model.disco)
+                </div>
+                <div>
+                    <label for="Artista">Nome do Artista:</label>
+                    @Html.EditorFor(model => model.artista)
+                </div>
+                <div>
+                    <label for="Faixas">Quantidade de faixas:</label>
+                    @Html.EditorFor(model => model.faixas)
+                </div>
+                <div>
+                    <br />
+                    <label>&nbsp;</label>
+                    <input type="submit" value="Adicionar" class="submit" />
+                </div>
+            </fieldset>
+        </form>
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
+</body>
+</html>
